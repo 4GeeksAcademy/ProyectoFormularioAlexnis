@@ -15,30 +15,32 @@
 <body>
     <div class="container">
         <!-- PRIMER ENCABEZADO -->
-        <form class="row mt-5 border border-secondary border-1">
-            <div class="bg-secondary p-2 ,-2">
+        <form class="row mt-5 border border-secondary-emphasis border-1">
+            <div class="bg-secondary p-2">
                 <h5>Payment form example</h5>
             </div>
 
             <!-- AVISO DE DATOS REQUERIDOS-->
-            <div class="alert alert-danger" role="alert">
-                Some fields are missing
+            <div class="p-2">
+                <div class="alert alert-danger" role="alert">
+                    Some fields are missing
+                </div>
             </div>
 
             <!-- DATOS SOLICITADOS DE TARJETA BANCARIA -->
             <div class="col-md-5 mb-3">
                 <label for="inputCard" class="form-label">Card #</label>
-                <input type="number" class="form-control" id="inputCard" name="inputCard" required>
+                <input type="number" placeholder="xxxxxxxxxxxx" class="form-control" id="inputCard" name="inputCard" required>
             </div>
 
             <div class="col-md-3 mb-3">
                 <label for="inputCvc" class="form-label">CVC #</label>
-                <input type="number" class="form-control" id="inputCvc" name="inputCvce" required>
+                <input type="number" placeholder="0000" class="form-control" id="inputCvc" name="inputCvce" required>
             </div>
 
             <div class="col-md-4 mb-3">
                 <label for="amount" class="form-label">Amount</label>
-                <input type="text" class="form-control" id="amount" name="amount" required>
+                <input type="number" placeholder="Amount" class="form-control" id="amount" name="amount" required>
             </div>
 
             <!-- DATOS PERSONALES-->
@@ -75,29 +77,29 @@
             </div>
 
             <!-- DATOS DE FORMA DE PAGO-->
-            <div class="col-md-6 ">
+            <div class="col-md-3">
                 <div>
                     <p>We accept:</p>
                 </div>
-                <div class="bg-secondary">
-                    <div class="form-check form-check-inline">
+                <div class="bg-secondary d-flex justify-content-between text-white p-2 rounded">
+                    <div class="form-check form-check-inline m-0">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                             value="option1">
                         <label class="form-check-label" for="inlineRadio1"><i
                                 class="fa-brands fa-cc-mastercard"></i></label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline m-0">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
                             value="option2">
                         <label class="form-check-label" for="inlineRadio2"><i class="fa-brands fa-cc-visa"></i></label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline m-0">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
                             value="option3">
                         <label class="form-check-label" for="inlineRadio3"><i
                                 class="fa-brands fa-cc-paypal"></i></label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline m-0">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
                             value="option3">
                         <label class="form-check-label" for="inlineRadio3"><i class="fa-brands fa-cc-amex"></i></label>
@@ -105,6 +107,10 @@
                 </div>
             </div>
 
+            <!-- DIV VACIO PARA DAR LA SEPARACION ENTRE FORMA DE PAGO Y LOS COMENTARIOS-->
+            <div class="col-md-3"></div>
+
+            <!-- ESPACIO PARA COMENTARIOS -->
             <div class="col-md-6 form-floating">
                 <p>Message</p>
                 <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
@@ -112,12 +118,13 @@
                 <label for="floatingTextarea2"></label>
                 <p>Add any notes here</p>
             </div>
-
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                <button class="btn btn-primary" type="button">Send</button>
+            <!-- BOTONES DE CANCELAR/ENVIAR-->
+            <div class="border-top">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end p-2">
+                    <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="button">Send</button>
+                </div>
             </div>
-
         </form>
     </div>
 
